@@ -1,7 +1,7 @@
 div#coverBody,
 div#inquiryBody {
   margin-top: 60px;
-  height: 75vh;
+  min-height: 75vh;
 }
 
 nav {
@@ -52,11 +52,65 @@ nav li a:hover {
   padding: 20px;
 }
 
-.logo {
-  position: fixed;
-  top: 5;
-  width: 50%;
-  height: 50%;
+div#inquiryBody {
+  background-color: rgba(231, 226, 226, 0.7);
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.margin-padding-0 {
+  margin: 0;
+  padding: 0;
+}
+
+.bs-bb {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.myContainer {
+  min-width: 75%;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+  border: 1.5px solid rgba(231, 225, 225, 0.5);
+  margin-top: 5px;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.lh-condensed {
+  line-height: 1.25;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+  .form-label-group {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+  }
+  .form-label-group label {
+    position: static;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
 }
 
 @media (max-width: 560px) {
@@ -66,9 +120,17 @@ nav li a:hover {
     background-position: bottom;
     background-image: url(/static/image/construction-nav-bg.svg);
   }
-  div#coverBody {
+  div#coverBody,
+  div#inquiryBody {
     margin-top: 120px;
-    height: 80vh;
+    min-height: 80vh;
+  }
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 50%;
+    min-height: 50%;
   }
 }
 /*# sourceMappingURL=mystyle.css.map */

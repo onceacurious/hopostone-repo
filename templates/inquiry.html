@@ -1,7 +1,79 @@
 {% extends 'layout.html'%}
 
 {% block body%}
-    <div id="inquiryBody">
-        <h1>Inquiry Page</h1>
+<div id="inquiryBody" class="margin-padding-0 bs-bb">
+    <div class="header">
+        <h1>Hopestone Inquiry</h1>
+        <form class="needs-validation myContainer" novalidate>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="customerName">Customer Name</label>
+                    <input type="text" class="form-control" id="customerName" placeholder="Optional" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="nickName">Nickname</label>
+                    <input type="text" class="form-control" id="nickName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Valid nickname is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="contact">Contact Number</label>
+                    <input type="contact" class="form-control" id="contact" placeholder="mobile:+63 9123456789 or telephone:(034) 123 4567" required>
+                    <div class="invalid-feedback">
+                        Contact number required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                <div class="invalid-feedback">
+                    Please enter your shipping address.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="address">Address 2 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Optional" required>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="cityMunicipality">City/Municipality</label>
+                    <input type="text" class="form-control" id="cityMunicipality" placeholder="" required>
+                    <div class="invalid-feedback">
+                        City or Municipality required.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="state">State</label>
+                    <input type="text" class="form-control" id="state" placeholder="" required>
+                    <div class="invalid-feedback">
+                        State required.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-14 mb-3">
+                <label for="inquiryTextarea">Details of inquiry</label>
+                <textarea type="text" class="form-control" id="inquiryTextarea" rows="5" placeholder="Please provide us about your inquiry." required></textarea>
+                <div class="invalid-feedback">
+                    Inquiry required.
+                </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit Inquiry</button>
+        </form>
     </div>
+</div>
 {% endblock %}
