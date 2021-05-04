@@ -1,0 +1,38 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<video autoplay muted loop id="myVideo">
+    <source src="/static/image/Water.mp4" type="video/mp4">
+    Video by <a
+        href="https://pixabay.com/users/adege-4994132/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30850">adege</a>
+    from <a
+        href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=30850">Pixabay</a>
+    Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+    <h1>Hopestone Construction Services</h1>
+    <p> We are a registered construction company providing services (e.g. Planning and Design, Building Construction,
+        Renovation,
+        Electrical, Electronics, Plumbing, Mechanical and other services) </p>
+    <button class="btn btn-outline-primary" id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
+
+    function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+    }
+</script>
+
+<!-- <div class="container-fluid" id="coverBody">
+    </div> -->
+{% endblock %}
