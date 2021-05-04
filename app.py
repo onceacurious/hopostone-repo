@@ -8,6 +8,6 @@ app =Flask(__name__)
 def cover_page():
     return render_template('cover.html')
 
-@app.route('/Inquire')
+@app.route('/inquire')
 def enquiry_page():
-    return render_template('enquiry.html')
+    return render_template('inquiry.html')
