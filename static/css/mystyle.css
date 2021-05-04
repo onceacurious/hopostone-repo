@@ -1,4 +1,5 @@
-div#coverBody {
+div#coverBody,
+div#inquiryBody {
   margin-top: 60px;
   height: 75vh;
 }
